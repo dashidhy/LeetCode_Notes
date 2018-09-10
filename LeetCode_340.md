@@ -1,6 +1,6 @@
 # 340. Longest Substring with At Most K Distinct Characters
 
-Problem link: [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/)
+Problem link: [340. Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/)
 
 * Level: [Hard](https://leetcode.com/problemset/all/?difficulty=Hard)
 * Appears in: [Google Interview](https://leetcode.com/explore/interview/card/google/)

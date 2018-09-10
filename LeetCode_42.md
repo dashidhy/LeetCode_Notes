@@ -1,6 +1,6 @@
 # 42. Trapping Rain Water
 
-Problem link: [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)
+Problem link: [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)
 
 * Level: [Hard](https://leetcode.com/problemset/all/?difficulty=Hard)
 * Appears in: [Google Interview](https://leetcode.com/explore/interview/card/google/)
