@@ -2,17 +2,24 @@
 
 Problem link: [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/)
 
-* Level: [<font color=red> Hard </font>](https://leetcode.com/problemset/all/?difficulty=Hard)
+* Level: [Hard](https://leetcode.com/problemset/all/?difficulty=Hard)
 * Appears in: [Google Interview](https://leetcode.com/explore/interview/card/google/)
-* Tags: [Hash Table](https://leetcode.com/tag/hash-table), [String](https://leetcode.com/tag/string), [Google](https://leetcode.com/company/google), [AppDynamics](https://leetcode.com/company/appdynamics), [Coupang](https://leetcode.com/company/coupang)
 
 ## Hints
+
+### Intuition
+
+We need to record and update the number of times that a character appears in the current substring. A hash table is the best solution.
+
+### Best complexity
+
+Time: O(n). Extra space: O(1).
 
 ### Key variables:
 
 * **int** *head* ---- A pointer points to the first charactor of the current substring.
 * **int** *tail* ---- A pointer points to the last charactor of the current substring.
-* **int** *count* ----A counter counts the number of distinct characters of the current substring.
+* **int** *count* ---- A counter counts the number of distinct characters of the current substring.
 * **int** *max* ---- Records the length of the longest substring.
 * **int[]** *hash* ---- A hash table records the number of times a character appears in the current substring.
 
@@ -32,6 +39,7 @@ In general:
 * No answer (should return the length of *s*)
 
 Algorithm:
+
 * Maximum appears at the end of the string.
 
 ## Implementation
