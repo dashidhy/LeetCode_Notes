@@ -39,7 +39,7 @@ In general:
 
 ## Implementation
 
-### c++ (beats 100%)
+### C++ (beats 100%)
 ```C++
 class Solution {
 public:
