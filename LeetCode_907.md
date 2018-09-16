@@ -9,7 +9,7 @@ Problem link: [907. Sum of Subarray Minimums](https://leetcode.com/problems/sum-
 
 ### Intuition
 
-Easy to come up with an $O(n^2)$ method. If you want to do it in $O(n)$, some math properties will help you optimize the algorithm.
+Easy to come up with an O(n^2) method. If you want to do it in O(n), some math properties will help you optimize the algorithm.
 
 Think about how many times a number will be counted in the process. *A[i]* will be counted *(r - i) *\**(i - l)* times where *r* is the index of the first element smaller than *A[i]* on its right side, and *l* is the index of the first element smaller than *A[i]* on its left side.
 
