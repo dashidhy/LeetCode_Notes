@@ -1,6 +1,6 @@
-# 905. Sort Array By Parity
+# 907. Sum of Subarray Minimums
 
-Problem link: [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/description/)
+Problem link: [907. Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/description/)
 
 * Level: [Medium](https://leetcode.com/problemset/all/?difficulty=Medium)
 * Appears in: [Weekly Contest 102](https://leetcode.com/contest/weekly-contest-102)
