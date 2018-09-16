@@ -29,9 +29,9 @@ Throughout all 4 cases, the loop invariant is maintained, and j-i is getting sma
 
 ### Complexity Analysis
 
-* Time Complexity: O(N)O(N), where NN is the length of A. Each step of the while loop makes j-i decrease by at least one. (Note that while quicksort is O(N \log N)O(NlogN) normally, this is O(N)O(N) because we only need one pass to sort the elements.)
+* Time Complexity: O(N), where N is the length of A. Each step of the while loop makes j-i decrease by at least one. (Note that while quicksort is O(NlogN) normally, this is O(N) because we only need one pass to sort the elements.)
 
-* Space Complexity: O(1)O(1) in additional space complexity. 
+* Space Complexity: O(1) in additional space complexity. 
 
 ## Implementation
 

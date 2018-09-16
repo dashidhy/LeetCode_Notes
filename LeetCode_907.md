@@ -21,6 +21,10 @@ Use a pointer *i* to traverse *A*. if *A[i] < A[stack[top]]*, we find a possible
 
 You should remember to fix the corner cases that *i == 0* and *i == A.size()*.
 
+### Complexity Analysis
+
+O(n), *A[i]* only be counted when pushing in and popping out of the stack.
+
 ## Implementation
 
 ### C++
