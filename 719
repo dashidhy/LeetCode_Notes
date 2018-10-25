@@ -1,0 +1,64 @@
+Find K-th Smallest Pair Distance
+
+Naive Solution: clean code but TLE:
+
+class Solution(object):
+    def smallestDistancePair(self, nums, k):
+        ans = []
+        for i in range(len(nums) - 1):
+            ans += [abs(nums[i] - nums[j]) for j in range(i + 1, len(nums))]
+        return heapq.nsmallest(k, ans)[-1]
+Efficient Solution: uses binary search and bisect_right - refer to it here
+
+class Solution(object):
+    def countPairsLTE(self, array, value):
+        ans = 0
+        for i in range(len(array)):
+            ans += bisect.bisect_right(array, array[i] + value, lo = i) - i - 1
+        return ans
+        
+    def smallestDistancePair(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        nums.sort()
+        low, high = min([abs(nums[i] - nums[i+1]) for i in range(len(nums) - 1)]), abs(nums[0] - nums[~0])
+        while low < high:
+            mid = (low + high)/2
+            if self.countPairsLTE(nums, mid) < k:
+                low = mid + 1
+            else:
+                high = mid
+        return low
+Update (from the suggestion by mroz) C++ solution
+
+class Solution {
+public:
+    int smallestDistancePair(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        int low = 0, high = nums.back() - nums.front();
+        
+        while (low < high) {
+            int mid = (low + high) >> 1;
+            if (count_pairs_lte(nums, mid) < k)
+                low = mid + 1;
+            else
+                high = mid;
+        }
+        return low;
+    }
+    
+    int count_pairs_lte(vector<int>& nums, int val) {
+        int l = 0;
+        int count = 0;
+        for (int r = 1; r < nums.size(); r++) {
+            while (l < r && nums[r] - nums[l] > val)
+                l++;
+            if (nums[r] - nums[l] <= val)
+                count += r - l;
+        }
+        return count;
+    }
+};
