@@ -1,0 +1,42 @@
+Description:
+
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Determine if you are able to reach the last index.
+
+Approach 1: Backtracking
+
+Complexity Analysis
+Time complexity : O(2^N)
+
+Space complexity : O(N)
+
+Approach 2: Dynamic Programming Top-down
+
+Top-down Dynamic Programming can be thought of as optimized backtracking. It relies on the observation that once we determine
+that a certain index is good / bad, this result will never change. This means that we can store the result and not need to 
+recompute it every time.
+
+Therefore, for each position in the array, we remember whether the index is good or bad. Let's call this array memo and let 
+its values be either one of: GOOD, BAD, UNKNOWN. This technique is called memoization.
+
+Time complexity : O(N^2)
+
+Space complexity : O(N)
+
+Approach 3: Greedy
+
+Once we have our code in the bottom-up state, we can make one final, important observation. From a given position, when we try
+to see if we can jump to a GOOD position, we only ever use one - the first one (see the break statement). In other words, the 
+left-most one. If we keep track of this left-most GOOD position as a separate variable, we can avoid searching for it in the 
+array. Not only that, but we can stop using the array altogether.
+
+Iterating right-to-left, for each position we check if there is a potential jump that reaches a GOOD index (currPosition + 
+nums[currPosition] >= leftmostGoodIndex). If we can reach a GOOD index, then our position is itself GOOD. Also, this new GOOD 
+position will be the new leftmost GOOD index. Iteration continues until the beginning of the array. If first position is a 
+GOOD index then we can reach the last index from the first position.
+
+Time complexity : O(N)
+
+Space complexity : O(1)
+
