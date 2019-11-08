@@ -45,3 +45,6 @@ public:
     }
 };
 ```
+
+### O(1) space complexity solution
+The only thing that needs to be store is the number of the left parenthesis. The algorithms starts with counting the number of the left parenthesis while going through the array. When there is a right parenthesis, the counter decrease one and add one whenever there is a left parenthesis. The loop breaks when the counter is negative, which means there is an invalid right parenthesis. Eventually, when the counter is still positive in the end which means there are additional left parenthesis, the solution will return False and True otherwise when counter is equal to zero.
